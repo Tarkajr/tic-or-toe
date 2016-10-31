@@ -1,7 +1,23 @@
-<h1>Login</h1>
+<h1>Log In:</h1>
 
-  <%= form_tag '/login' do %>
-    Username: <%= text_field_tag :username %>
-    Password: <%= password_field_tag :password %>
-    <%= submit_tag "Log In" %>
+<%= form_tag '/login' do %>
+<div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <%= text_field_tag :username %>
+          <label for="username" placeholder"Username"> </label>
+
+
+      <div class="row">
+        <div class="input-field col s12">
+          <%= password_field_tag :password %>
+          <label for="password"></label>
+        </div>
+      </div>
+          <button class="btn waves-effect waves-light" type="submit" name="action" <%= submit_tag "Log In" %> Log In
+</button>
 <%end%>
+
+    </form>
+  </div>

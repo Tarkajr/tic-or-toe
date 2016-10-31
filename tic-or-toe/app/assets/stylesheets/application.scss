@@ -4,8 +4,12 @@ body{
 .nav-wrapper{
   background-color: #7b1fa2 ;
 }
+h1{
+  color: white;
+
+}
 
 @import "materialize/components/color";
 $primary-color: color("blue", "lighten-2") !default;
-$secondary-color: color("yellow", "lighten-2") !default;
+$secondary-color: color("green", "lighten-1") !default;
 @import 'materialize';
