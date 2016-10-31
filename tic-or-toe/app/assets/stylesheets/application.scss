@@ -1,0 +1,11 @@
+body{
+  background-color: #ba68c8;
+}
+.nav-wrapper{
+  background-color: #7b1fa2 ;
+}
+
+@import "materialize/components/color";
+$primary-color: color("blue", "lighten-2") !default;
+$secondary-color: color("yellow", "lighten-2") !default;
+@import 'materialize';
