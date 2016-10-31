@@ -5,8 +5,10 @@
     <%= csrf_meta_tags %>
     <!-- Compiled and minified CSS -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+      <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons">
 
       <!-- Compiled and minified JavaScript -->
+      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -22,8 +24,10 @@
        <li> <% if current_user %> Signed in as <%= current_user.username %></li>
         <li> <%= link_to "Log Out", '/logout' %></li>
    <% else %>
+
      <li> <%= link_to 'Log In', '/login' %></li>
      <li> <%= link_to 'Sign Up', '/users/new' %></li>
+
    <% end %>
      </ul>
    </div>
