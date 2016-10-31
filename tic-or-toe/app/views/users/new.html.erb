@@ -1,27 +1,25 @@
 <h1>Sign up:</h1>
-
+<div class="forms">
   <%= form_for :user, url: '/users' do |f| %>
-    Username: <%= f.text_field :username %>
-    Password: <%= f.password_field :password %>
-    <%= f.submit "Register" %>
-  <%end %>
-  <div class="row">
+    <div class="row">
       <form class="col s12">
         <div class="row">
           <div class="input-field col s6">
-            <input id="first_name" type="text" class="validate">
+            <%= f.text_field :username %>
             <label for="first_name">First Name</label>
 
 
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="password" type="password" class="validate">
+    <div class="row">
+      <div class="input-field col s12">
+          <%= f.password_field :password %>
             <label for="password">Password</label>
           </div>
         </div>
-        <button class="btn waves-effect waves-light" type="submit" name="action">Register
+        <button class="btn waves-effect waves-light" type="submit" name="action"<%= f.submit "Register"%>Register
   </button>
+    <%end %>
 
 
       </form>
+    </div>
     </div>
