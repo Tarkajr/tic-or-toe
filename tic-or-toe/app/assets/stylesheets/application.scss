@@ -1,13 +1,14 @@
 body{
   background-color: #ba68c8;
+  color: white;
 }
 .nav-wrapper{
   background-color: #7b1fa2 ;
 }
 h1{
   color: white;
-
 }
+
 
 @import "materialize/components/color";
 $primary-color: color("blue", "lighten-2") !default;
