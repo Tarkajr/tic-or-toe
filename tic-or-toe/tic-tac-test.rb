@@ -133,11 +133,14 @@ def num_away(num, game_board)
   diagonal_one = [game_board[0][0], game_board[1][1], game_board[2][2], game_board[3][3], game_board[4][4]]
   diagonal_two = [game_board[4][0], game_board[3][1], game_board[2][2], game_board[1][3], game_board[0][4]]
 
-  win_board = num_away_from_winning(1, game_board)
-  if !board_is_same(win_board, game_board)
-    item_plugged = true
-    game_board = win_board
-  end
+	if num < 3
+	  win_board = num_away_from_winning(num, game_board)
+	  if !board_is_same(win_board, game_board)
+	    item_plugged = true
+	    game_board = win_board
+	  end
+	end
+
   if game_board[2][2] == " " && !item_plugged
     item_plugged = true
     game_board[2][2] = "o"
@@ -218,6 +221,20 @@ def random_move(game_board)
   game_board
 end
 
+def process_board(game_board)
+	i = 0
+	processed_board = []
+	while i < game_board.length
+		j = 0
+		while j < game_board[i].length
+			@id = i.to_s + j.to_s
+			processed_board << {id: @id, content: game_board[i][j]}
+			j += 1
+		end
+		i+=1
+	end
+	processed_board
+end
 
 game_status = 'ongoing'
 
@@ -228,24 +245,12 @@ while game_status == 'ongoing'
     game_status = "won"
   end
   game_board = num_away(1, game_board)
+	# game_board = random_move(game_board)
   if check_board('o', game_board)
     p "computer wins!!!!"
     game_status = "lost"
   end
   display_board(game_board)
+	p process_board(game_board)
+	p process_board(game)
 end
-
-# game_board = random_move(game_board)
-# display_board(game_board)
-# game_board = random_move(game_board)
-# display_board(game_board)
-# game_board = random_move(game_board)
-# display_board(game_board)
-# game_board = random_move(game_board)
-# display_board(game_board)
-# game_board = random_move(game_board)
-# display_board(game_board)
-# game_board = random_move(game_board)
-# display_board(game_board)
-# game_board = random_move(game_board)
-# display_board(game_board)
