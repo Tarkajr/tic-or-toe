@@ -234,18 +234,3 @@ while game_status == 'ongoing'
   end
   display_board(game_board)
 end
-
-# game_board = random_move(game_board)
-# display_board(game_board)
-# game_board = random_move(game_board)
-# display_board(game_board)
-# game_board = random_move(game_board)
-# display_board(game_board)
-# game_board = random_move(game_board)
-# display_board(game_board)
-# game_board = random_move(game_board)
-# display_board(game_board)
-# game_board = random_move(game_board)
-# display_board(game_board)
-# game_board = random_move(game_board)
-# display_board(game_board)

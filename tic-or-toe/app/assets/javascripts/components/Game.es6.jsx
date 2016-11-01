@@ -1,51 +1,25 @@
 class Game extends React.Component {
+  constructor() {
+    super()
+  }
 
+  // updateBoard(square) {
+  //   var board = this.state.board
+  //   // find the spot in the array, and update it with the square
+  //   this.setState(board: [newArray])
+  // }
 
   render(){
-
+    const squares = this.props.rubyBoard.map(square => {
+      return(<Square key={square.id} data={square.content} />)
+    })
     return(
-      <div id="board">
-      <table>
-      <tbody>
-      <tr id="row1">
-      <td className="square"></td>
-      <td className="square"></td>
-      <td className="square"></td>
-      <td className="square"></td>
-      <td className="square"></td>
-      </tr>
-      <tr id="row2">
-      <td className="square"></td>
-      <td className="square"></td>
-      <td className="square"></td>
-      <td className="square"></td>
-      <td className="square"></td>
-      </tr>
-      <tr id="row3">
-      <td className="square"></td>
-      <td className="square"></td>
-      <td className="square"></td>
-      <td className="square"></td>
-      <td className="square"></td>
-      </tr>
-      <tr id="row4">
-      <td className="square"></td>
-      <td className="square"></td>
-      <td className="square"></td>
-      <td className="square"></td>
-      <td className="square"></td>
-      </tr>
-      <tr id="row5">
-      <td className="square"></td>
-      <td className="square"></td>
-      <td className="square"></td>
-      <td className="square"></td>
-      <td className="square"></td>
-      </tr>
-      </tbody>
-      </table>
+      <div className="row">
+        {squares}
       </div>
     )
   }
-
 }
+
+
+// {board.map(sq => <Square updateBoard={this.updateBoard} marked={sq} />)}
