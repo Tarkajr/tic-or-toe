@@ -31,9 +31,6 @@ class Game extends React.Component {
     }
 
 
-    $(".square").on(click, )
-
-
 
 
 }
