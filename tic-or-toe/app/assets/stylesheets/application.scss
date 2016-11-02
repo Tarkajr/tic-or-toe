@@ -64,3 +64,9 @@ table {
 $primary-color: color("blue", "lighten-2") !default;
 $secondary-color: color("green", "lighten-1") !default;
 @import 'materialize';
+
+div.square{
+  color: black;
+  font-size: 45px;
+  text-align: center;
+}

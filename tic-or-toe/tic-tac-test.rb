@@ -245,12 +245,11 @@ while game_status == 'ongoing'
     game_status = "won"
   end
   game_board = num_away(1, game_board)
-	# game_board = random_move(game_board)
+	game_board = random_move(game_board)
   if check_board('o', game_board)
     p "computer wins!!!!"
     game_status = "lost"
   end
   display_board(game_board)
 	p process_board(game_board)
-	p process_board(game)
 end
