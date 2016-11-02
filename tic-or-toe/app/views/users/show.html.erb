@@ -3,5 +3,12 @@
 <h3>Games Played: <%=@user.games.length%></h3>
 
 <%@user.games.each do |game|%>
-
+  Game <%=game.id%>:
+  <ul>
+    <li>- Difficulty Level: <%=game.difficulty%></li>
+    <li>- Status: <%=game.game_status%></li>
+    <% if game.game_status == 'ongoing'%>
+    <li><a href="/games/<%=game.id%>">Keep Playing</a></li>
+    <%end%>
+  </ul>
 <%end%>

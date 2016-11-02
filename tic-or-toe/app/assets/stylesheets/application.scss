@@ -1,4 +1,11 @@
+@import "materialize/components/color";
+$primary-color: color("green", "lighten-1") !default;
+$secondary-color: color("green", "lighten-1") !default;
+@import 'materialize';
 
+a{
+  color: #9ccc65;
+}
   #logo {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -59,14 +66,6 @@ table {
   margin-top: 50px;
 }
 
-#s00 {
-
-}
-
-@import "materialize/components/color";
-$primary-color: color("blue", "lighten-2") !default;
-$secondary-color: color("green", "lighten-1") !default;
-@import 'materialize';
 
 div.square{
   color: black;
