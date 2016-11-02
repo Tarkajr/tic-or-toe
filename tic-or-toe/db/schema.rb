@@ -17,11 +17,11 @@ ActiveRecord::Schema.define(version: 20161031150454) do
 
   create_table "games", force: :cascade do |t|
     t.integer  "user_id"
-    t.boolean  "game_won"
-    t.text     "game_board", default: [[" ", " ", " ", " ", " "], [" ", " ", " ", " ", " "], [" ", " ", " ", " ", " "], [" ", " ", " ", " ", " "], [" ", " ", " ", " ", " "]],              array: true
-    t.string   "difficulty"
-    t.datetime "created_at",                                                                                                                                                   null: false
-    t.datetime "updated_at",                                                                                                                                                   null: false
+    t.string   "game_status", default: "ongoing"
+    t.text     "game_board",  default: [[" ", " ", " ", " ", " "], [" ", " ", " ", " ", " "], [" ", " ", " ", " ", " "], [" ", " ", " ", " ", " "], [" ", " ", " ", " ", " "]],              array: true
+    t.string   "difficulty",  default: "medium"
+    t.datetime "created_at",                                                                                                                                                    null: false
+    t.datetime "updated_at",                                                                                                                                                    null: false
   end
 
   create_table "users", force: :cascade do |t|
