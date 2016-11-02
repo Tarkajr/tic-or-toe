@@ -132,13 +132,13 @@ def num_away(num, game_board)
   diagonal_one = [game_board[0][0], game_board[1][1], game_board[2][2], game_board[3][3], game_board[4][4]]
   diagonal_two = [game_board[4][0], game_board[3][1], game_board[2][2], game_board[1][3], game_board[0][4]]
 
-	# if num < 3
-	#   win_board = num_away_from_winning(num, game_board)
-	#   if !board_is_same(win_board, game_board)
-	#     item_plugged = true
-	#     game_board = win_board
-	#   end
-	# end
+	if num < 2
+	  win_board = num_away_from_winning(num, game_board)
+	  if !board_is_same(win_board, game_board)
+	    item_plugged = true
+	    game_board = win_board
+	  end
+	end
 
   if game_board[2][2] == " " && !item_plugged
     item_plugged = true
@@ -218,4 +218,11 @@ def random_move(game_board)
 	x = random_move[1].to_i
 	game_board[y][x] = "o"
   game_board
+end
+
+def generate_rand(difficulty)
+  return rand(1...5) if difficulty == "easy"
+  return rand(1..10) if difficulty == "medium"
+  return rand(1..15) if difficulty == "hard"
+  return rand(5..20) if difficulty == "impossible"
 end

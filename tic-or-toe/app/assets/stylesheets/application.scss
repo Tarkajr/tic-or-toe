@@ -3,9 +3,7 @@ $primary-color: color("green", "lighten-1") !default;
 $secondary-color: color("green", "lighten-1") !default;
 @import 'materialize';
 
-a{
-  color: #9ccc65;
-}
+
   #logo {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -33,14 +31,14 @@ a{
   transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
 }
 
-a {
-  text-decoration: none;
-  color: rgba(255,255,255,1);
+.board {
+  width: 800px;
+  margin:0 auto;
 }
 
 .square{
     width:150px;
-    height:80px;
+    height:120px;
     border: 5px solid #ba68c8;
     background-color: orange;
 }
@@ -69,6 +67,11 @@ table {
 
 div.square{
   color: black;
-  font-size: 45px;
+  font-size: 65px;
   text-align: center;
+}
+
+.play {
+  margin: 0 auto;
+  width: auto;
 }
