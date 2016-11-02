@@ -23,6 +23,7 @@
    <div class="nav-wrapper">
      <a href="#" class="brand-logo"><img src="https://cdn3.iconfinder.com/data/icons/halloween-2/512/pumpkin-icon.png" height="55" width="55" alt="" /></a>
      <ul id="nav-mobile" class="right hide-on-med-and-down">
+       <li><a href="/">Home</a></li>
        <li> <% if current_user %> Welcome <%= current_user.username.capitalize %>!</li>
         <li> <%= link_to "Log Out", '/logout' %></li>
    <% else %>
