@@ -1,8 +1,10 @@
 <section class="container">
   <% if session[:user_id] %>
     <%= form_for @game do |f| %>
+    <div class="input-field col s12">
+    <%= select_tag(:difficulty, options_for_select([['Easy', 'easy'],['Medium', 'medium'],['Hard', 'hard'],['Impossible', 'impossible']]))%>
+    </div>
       <%= f.submit "Play a Game!" %>
     <% end %>
   <% end %>
-  
 </section>

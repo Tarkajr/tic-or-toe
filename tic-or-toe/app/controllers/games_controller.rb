@@ -11,7 +11,8 @@ class GamesController < ApplicationController
 
   def create
     @game = Game.new
-    @game.user_id = session[:user_id]
+    @game.user = current_user
+    @game.difficulty = params[:difficulty]
     @game.save
     redirect_to @game
   end

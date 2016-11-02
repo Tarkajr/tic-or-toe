@@ -40,10 +40,12 @@ class Game extends React.Component {
     var row4Return = parsedRow(this.state.board.slice(15, 20))
     var row5Return = parsedRow(this.state.board.slice(20, 25))
     var gameStatus = this.state.gameStatus
+    var gameDifficulty = this.state.difficulty
     return(
 
       <div className="board">
-        Game Status: {gameStatus}
+        Game Status: {gameStatus}<br/>
+        Game Difficulty: {gameDifficulty}
         <div className="row">
           {row1Return}
         </div>
@@ -59,19 +61,7 @@ class Game extends React.Component {
         <div className="row">
           {row5Return}
         </div>
-          <form action="demo_form.asp" id="carform">
-            <div className="input-field col s12">
-            <label>Choose your difficulty</label>
-              <select>
-                <option value="1">Easy</option>
-                <option value="2">Medium</option>
-                <option value="3">Hard</option>
-                <option value="3">Impossible</option>
-              </select>
-            </div>
-            <input type="submit"/>
-          </form>
-        </div>
+      </div>
     )
   }
 }

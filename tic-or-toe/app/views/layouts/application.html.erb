@@ -28,7 +28,7 @@
        <li><%= link_to "Profile", '/users/show'%></li>
         <li> <%= link_to "Log Out", '/logout' %></li>
    <% else %>
-
+      <li><%= link_to "Home", '/'%></li>
      <li> <%= link_to 'Log In', '/login' %></li>
      <li> <%= link_to 'Sign Up', '/users/new' %></li>
 
@@ -36,6 +36,9 @@
      </ul>
    </div>
  </nav>
+ <div id="logo">
+   <a href="/">Tic-or-Toe</a>
+ </div>
 <div class="container">
 
 
