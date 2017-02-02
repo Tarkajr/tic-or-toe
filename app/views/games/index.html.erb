@@ -4,7 +4,12 @@
     <div class="input-field col s12">
     <%= select_tag(:difficulty, options_for_select([['Easy', 'easy'],['Medium', 'medium'],['Hard', 'hard'],['Impossible', 'impossible']]))%>
     </div>
-      <%= f.submit "Play a Game!",  :class => 'play' %>
+      <%= f.submit "Play a Game!",  :class => 'waves-effect waves-light btn-large ' %>
     <% end %>
+  <%else%>
+    <div class="input-field col s12">
+      <%= select_tag(:difficulty, options_for_select([['Easy', 'easy'],['Medium', 'medium'],['Hard', 'hard'],['Impossible', 'impossible']]))%>
+    </div>
+    <a class="waves-effect waves-light btn-large" href="http://tofumaker.github.io?=<%=:difficulty%>"><i class="material-icons right">dashboard</i>Play a Game!</a>
   <% end %>
 </section>

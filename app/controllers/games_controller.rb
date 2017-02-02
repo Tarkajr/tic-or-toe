@@ -37,7 +37,6 @@ class GamesController < ApplicationController
         end
 
         if check_board('o', @game.game_board)
-          p "computer wins!!!!"
           @game.game_status = "Computer Won!"
         end
         if empty_tiles(@game.game_board).empty? && @game.game_status == "ongoing"
