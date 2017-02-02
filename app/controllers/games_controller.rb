@@ -1,7 +1,6 @@
 class GamesController < ApplicationController
   def index
     @game = Game.new unless @game
-    # @board = GamesHelper.process_board(@game.game_board)
   end
 
   def show
@@ -11,8 +10,14 @@ class GamesController < ApplicationController
 
   def create
     @game = Game.new
-    @game.user = current_user
     @game.difficulty = params[:difficulty]
+    if current_user
+      @game.user = current_user
+    else
+      temp_user = User.new
+      temp_user.username = "Human Player"
+      @game.user = temp_user
+    end
     @game.save
     redirect_to @game
   end
@@ -23,7 +28,6 @@ class GamesController < ApplicationController
     if request.xhr?
         @game.game_board = GamesHelper.plot(params[:player_move], @game.game_board)
         if check_board('x', @game.game_board)
-          p "player wins!!!!"
           @game.game_status = "Player Won!"
         end
 
