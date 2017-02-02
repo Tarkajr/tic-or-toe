@@ -1,10 +1,10 @@
 <section class="container">
-  <% if session[:user_id] %>
     <%= form_for @game do |f| %>
-    <div class="input-field col s12">
+      <div class="input-field col s12">
     <%= select_tag(:difficulty, options_for_select([['Easy', 'easy'],['Medium', 'medium'],['Hard', 'hard'],['Impossible', 'impossible']]))%>
     </div>
-      <%= f.submit "Play a Game!",  :class => 'play' %>
+      <%= button_tag(type: "Play a Game!", class: "waves-effect waves-light btn-large") do %>
+        Play a Game!<i class="material-icons right">dashboard</i>
+      <% end %>
     <% end %>
-  <% end %>
 </section>
