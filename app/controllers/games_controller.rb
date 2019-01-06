@@ -14,11 +14,12 @@ class GamesController < ApplicationController
     if current_user
       @game.user = current_user
     else
-      temp_user = User.new
-      temp_user.username = "Human Player"
+      temp_user = User.find_by(id:1)
       @game.user = temp_user
     end
     @game.save
+    @game.user.total_games += 1
+    @game.user.save
     redirect_to @game
   end
 

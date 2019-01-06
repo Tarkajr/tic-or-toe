@@ -1,9 +1,9 @@
 <h1><%=@user.username%>'s Stats</h1>
 
 <h3>Games Played: <%=@user.games.length%></h3>
-<% @ordered = @user.games.order(id: :asc)%>
+<% @ordered = @user.games.order(id: :desc)%>
 <%@ordered.each do |game|%>
-  Game <%=game.id%>:
+  Game <%=game.user.total_games -= 1%>:
   <ul>
     <li>- Difficulty Level: <%=game.difficulty%></li>
     <li>- Status: <%=game.game_status%></li>

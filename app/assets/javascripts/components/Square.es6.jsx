@@ -16,11 +16,11 @@ class Square extends React.Component {
         })
       }
       else {
-        alert('Please Click on Empty Tile!')
+        alert('Please Click Empty Tile!')
       }
     }
     else {
-      alert("Game Over Man!")
+      alert("Game Over!")
     }
 
 

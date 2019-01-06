@@ -7,12 +7,12 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     @user.save
-    redirect_to '/'
+    redirect_to '/login'
   end
 
   def show
     @user = User.find(current_user.id)
-    
+
   end
 
   private
